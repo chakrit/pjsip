@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pjlib", "pjlib.vcproj", "{7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pjlib_samples", "pjlib_samples.vcproj", "{07AD8099-71FF-4DA3-9078-EF787D88A494}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A} = {7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pjlib_test", "pjlib_test.vcproj", "{14E6C298-03F6-4125-8545-7FD5A34B8E5A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A} = {7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pjlibpp", "pjlibpp.vcproj", "{7BB69569-F8F5-41AB-95BB-9E3AA3A0CAB4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A}.Debug.ActiveCfg = Debug|Win32
+		{7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A}.Debug.Build.0 = Debug|Win32
+		{7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A}.Release.ActiveCfg = Release|Win32
+		{7BDE3EEB-E290-4E28-BCA2-7DC3F512AA8A}.Release.Build.0 = Release|Win32
+		{07AD8099-71FF-4DA3-9078-EF787D88A494}.Debug.ActiveCfg = Debug|Win32
+		{07AD8099-71FF-4DA3-9078-EF787D88A494}.Debug.Build.0 = Debug|Win32
+		{07AD8099-71FF-4DA3-9078-EF787D88A494}.Release.ActiveCfg = Release|Win32
+		{07AD8099-71FF-4DA3-9078-EF787D88A494}.Release.Build.0 = Release|Win32
+		{14E6C298-03F6-4125-8545-7FD5A34B8E5A}.Debug.ActiveCfg = Debug|Win32
+		{14E6C298-03F6-4125-8545-7FD5A34B8E5A}.Debug.Build.0 = Debug|Win32
+		{14E6C298-03F6-4125-8545-7FD5A34B8E5A}.Release.ActiveCfg = Release|Win32
+		{14E6C298-03F6-4125-8545-7FD5A34B8E5A}.Release.Build.0 = Release|Win32
+		{7BB69569-F8F5-41AB-95BB-9E3AA3A0CAB4}.Debug.ActiveCfg = Debug|Win32
+		{7BB69569-F8F5-41AB-95BB-9E3AA3A0CAB4}.Debug.Build.0 = Debug|Win32
+		{7BB69569-F8F5-41AB-95BB-9E3AA3A0CAB4}.Release.ActiveCfg = Release|Win32
+		{7BB69569-F8F5-41AB-95BB-9E3AA3A0CAB4}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
