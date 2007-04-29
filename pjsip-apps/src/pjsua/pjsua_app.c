@@ -95,6 +95,7 @@ static pj_str_t		uri_arg;
 #ifdef STEREO_DEMO
 static void stereo_demo();
 #endif
+pj_status_t app_destroy(void);
 
 /*****************************************************************************
  * Configuration manipulation
@@ -320,7 +321,7 @@ static pj_status_t parse_args(int argc, char *argv[],
 {
     int c;
     int option_index;
-    enum { OPT_CONFIG_FILE, OPT_LOG_FILE, OPT_LOG_LEVEL, OPT_APP_LOG_LEVEL, 
+    enum { OPT_CONFIG_FILE=127, OPT_LOG_FILE, OPT_LOG_LEVEL, OPT_APP_LOG_LEVEL, 
 	   OPT_HELP, OPT_VERSION, OPT_NULL_AUDIO, 
 	   OPT_LOCAL_PORT, OPT_IP_ADDR, OPT_PROXY, OPT_OUTBOUND_PROXY, 
 	   OPT_REGISTRAR, OPT_REG_TIMEOUT, OPT_PUBLISH, OPT_ID, OPT_CONTACT,
@@ -879,7 +880,7 @@ static pj_status_t parse_args(int argc, char *argv[],
 	default:
 	    PJ_LOG(1,(THIS_FILE, 
 		      "Argument \"%s\" is not valid. Use --help to see help",
-		      argv[pj_optind]));
+		      argv[pj_optind-1]));
 	    return -1;
 	}
     }
@@ -3086,7 +3087,7 @@ pj_status_t app_init(int argc, char *argv[])
     return PJ_SUCCESS;
 
 on_error:
-    pjsua_destroy();
+    app_destroy();
     return status;
 }
 
@@ -3098,7 +3099,7 @@ pj_status_t app_main(void)
     /* Start pjsua */
     status = pjsua_start();
     if (status != PJ_SUCCESS) {
-	pjsua_destroy();
+	app_destroy();
 	return status;
     }
 
